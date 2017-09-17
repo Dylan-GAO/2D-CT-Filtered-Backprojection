@@ -73,9 +73,11 @@ n2_2 = 512-n2_2+1;
 
 r = [];
 for i = 1 : 13
-    for j = 1 : 10
+    for j = 1 : 13
         tmp3 = cenfunc(n1_1(i), n1_2(i), n2_1(j), n2_2(j));
-        r = [r; cenfunc(n1_1(i), n1_2(i), n2_1(j), n2_2(j))];
+        if imag(tmp3) == 0
+            r = [r; tmp3];
+        end
     end
 end
 
@@ -84,7 +86,7 @@ figure
 scatter(r(:, 1), r(:, 2));
 hold on
 
-scatter(-9.5471, -6.9475);
+% scatter(-9.5471, -6.9475);
 
 x_cen = mean(r(:,1));
 y_cen = mean(r(:,2));
