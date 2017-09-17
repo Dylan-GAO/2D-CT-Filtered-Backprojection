@@ -92,6 +92,7 @@ y_cen = res(2);
 fprintf('x_cen = %f, y_cen = %f\n', x_cen, y_cen);
 
 % plot
+x = -15 : 0.1 : 15;
 plot(x,sqrt((1-x.^2/15^2)*40^2));
 plot(x,-sqrt((1-x.^2/15^2)*40^2));
 scatter(x_cen, y_cen);
