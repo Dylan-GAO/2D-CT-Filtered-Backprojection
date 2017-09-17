@@ -1,4 +1,4 @@
-function f = myfilter(PR)
+function ff = myfilter(PR)
 
 a = 1;
 [Length, Count] = size(PR);
@@ -13,7 +13,7 @@ f = fftshift(r);
 for i = 1:Count
     IMG = fft(PR(:, i));
     fimg = IMG .* f';
-    f(:, i) = ifft(fimg);
+    ff(:, i) = ifft(fimg);
 end
-f = real(f);
+ff = real(ff);
 end
