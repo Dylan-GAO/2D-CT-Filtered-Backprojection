@@ -1,4 +1,4 @@
-%ImgData = CTplot(data_2,a,x_cen,y_cen,0.2774,1);
+ImgData = CTplot(data_2,a,x_cen,y_cen,0.2774,1);
 Ab_std= zeros(256);
 for i=1:2:512
     for j=1:2:512
