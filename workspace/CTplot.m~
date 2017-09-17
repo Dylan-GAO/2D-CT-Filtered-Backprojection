@@ -1,0 +1,21 @@
+function CTplot(OriData, Theta, x0, y0, d)
+
+oc = sqrt(x0^2 + y0^2);
+koc = y0 / x0;
+
+for i = 1 : size(OriData, 2)
+    tmp = round(oc * (Theta(i) - atan(abs(koc))) / d);
+    if tmp >= 0
+        for j = 1 + tmp : size(OriData, 1)
+            OriData(j, i) = OriData(j - tmp, i);
+        end
+    end
+    if tmp < 0
+        for j = 
+    end
+end
+
+ImgData = rebuild(OriData, Theta);
+figure
+imagesc(ImgData);
+end
