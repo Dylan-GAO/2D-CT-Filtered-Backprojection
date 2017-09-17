@@ -1,6 +1,6 @@
 function mark_point_matrix = Mark_Point(projection_matrix)
 mark_point = zeros(size(projection_matrix));
-for i = 1:size(projection_matrix, 2)
+for i = 1 : size(projection_matrix, 2)
     if projection_matrix(1,i) == 0
         flag = 0;
     else

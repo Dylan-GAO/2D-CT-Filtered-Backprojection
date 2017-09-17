@@ -1,8 +1,8 @@
-%load ../data.mat data_2
+%load data.mat data_2
 
 tmp1 = [];
 for i = 1 : 13
-    tmp1 = [tmp1 data_2(:,i)];
+    tmp1 = [tmp1 data_2(:, i)];
 end
 
 for i = 1 : 13
@@ -24,7 +24,7 @@ n1_1 = sum(tmp1);
 n1_2 = [];
 for i = 1 : 13
     for j = 512 : -1 : 1
-        if tmp1(j,i)~=0
+        if tmp1(j,i) ~= 0
             n1_2 = [n1_2 j];
             break;
         end
@@ -33,7 +33,6 @@ end
 n1_2 = 512 - n1_2 + 1;
 
 %%
-
 tmp1=[];
 for i = 140 : 152
     tmp1 = [tmp1 data_2(:, i)];
@@ -41,7 +40,7 @@ end
 
 for i = 1 : 13
     for j = 1 : 80
-        tmp1(j,i) = 0;
+        tmp1(j, i) = 0;
     end
 end
 
@@ -64,7 +63,7 @@ for i = 1 : 13
         end
     end
 end
-n2_2 = 512-n2_2+1;
+n2_2 = 512 - n2_2 + 1;
 
 %disp(n1_1);
 %disp(n1_2);
@@ -88,8 +87,8 @@ hold on
 
 % scatter(-9.5471, -6.9475);
 
-x_cen = mean(r(:,1));
-y_cen = mean(r(:,2));
-scatter(x_cen,y_cen);
+x_cen = mean(r(:, 1));
+y_cen = mean(r(:, 2));
+scatter(x_cen, y_cen);
 disp([x_cen y_cen]);
 axis([-50 50 -50 50])

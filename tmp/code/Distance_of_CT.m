@@ -1,3 +1,4 @@
+load data.mat data_2
 data = data_2;
 data(:, 14 : 108) = 0;
 for i = 1 : 13
