@@ -1,4 +1,4 @@
-load ../data.mat data_2
+%load ../data.mat data_2
 
 tmp1 = [];
 for i = 1 : 13

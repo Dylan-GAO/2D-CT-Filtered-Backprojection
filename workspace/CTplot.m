@@ -19,5 +19,6 @@ if option == 1
 end
 
 ImgData = rebuild(OriData, rad2deg(Theta));
+figure;
 imagesc(ImgData);
 end
