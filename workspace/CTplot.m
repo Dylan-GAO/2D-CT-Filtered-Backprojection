@@ -1,4 +1,4 @@
-function CTplot(OriData, Theta, x0, y0, d, option)
+function ImgData = CTplot(OriData, Theta, x0, y0, d, option)
 
 if option == 1
     oc = sqrt(x0^2 + y0^2);
@@ -19,6 +19,5 @@ if option == 1
 end
 
 ImgData = rebuild(OriData, rad2deg(Theta));
-figure
 imagesc(ImgData);
 end
